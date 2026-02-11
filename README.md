@@ -1,1 +1,215 @@
-# felipeandrewpro.github.io
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Portfólio de Felipe Andrew - Cientista de Dados, Desenvolvedor AI e Empreendedor. Projetos em Python, Power BI e Inteligência Artificial.">
+    <meta name="keywords" content="Felipe Andrew, Data Science, AI, Python, Gontijo, Desenvolvedor, Portfólio">
+    <meta name="author" content="Felipe Andrew">
+
+    <title>Felipe Andrew | Data Scientist & AI Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- DESIGN SYSTEM --- */
+        :root {
+            --cor-fundo: #0a0a0a;
+            --cor-card: rgba(30, 30, 30, 0.7);
+            --cor-destaque: #00FF9C; /* Verde Neon Tech */
+            --cor-texto-principal: #ffffff;
+            --cor-texto-secundario: #b3b3b3;
+            --borrao: 10px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--cor-fundo);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 156, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 100, 255, 0.1) 0%, transparent 20%);
+            color: var(--cor-texto-principal);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--cor-card);
+            backdrop-filter: blur(var(--borrao));
+            -webkit-backdrop-filter: blur(var(--borrao));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- PERFIL --- */
+        .profile-picture {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--cor-destaque);
+            object-fit: cover;
+            margin-bottom: 20px;
+            /* Usa sua foto do GitHub automaticamente */
+            background-image: url('https://github.com/felipeandrewpro.png'); 
+            background-size: cover;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            color: var(--cor-texto-principal);
+            margin-bottom: 5px;
+        }
+
+        .cargo {
+            color: var(--cor-destaque);
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .bio {
+            color: var(--cor-texto-secundario);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- SEÇÕES --- */
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: left;
+        }
+
+        .skill-card {
+            background: rgba(255,255,255,0.03);
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        
+        .skill-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: var(--cor-destaque);
+            font-size: 1em;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- REDES SOCIAIS --- */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            list-style: none;
+        }
+
+        .social-links a {
+            color: var(--cor-texto-secundario);
+            font-size: 1.8em;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--cor-destaque);
+            transform: scale(1.2);
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .container { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="profile-picture"></div>
+
+        <h1>Felipe Andrew</h1>
+        <p class="cargo">Data Scientist | AI Developer | Empreendedor</p>
+        
+        <p class="bio">
+            Transformo dados em decisões estratégicas. Graduando em Ciência da Computação e ADS, combino a experiência operacional da Gontijo e a visão de negócios da GREEX com soluções avançadas em Inteligência Artificial e Python.
+        </p>
+
+        <h2>STACK TECNOLÓGICO</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3><i class="fas fa-brain"></i> IA & Dados</h3>
+                <p>Python (Pandas, NumPy), Machine Learning, Engenharia de Prompt e APIs da OpenAI.</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-chart-line"></i> Business Intel</h3>
+                <p>Power BI, SQL e análise de métricas para tomada de decisão estratégica.</p>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-laptop-code"></i> Web & Cloud</h3>
+                <p>HTML5, CSS3, Git/GitHub e noções de Cloud (AWS/Azure).</p>
+            </div>
+        </div>
+
+        <h2>EMPREENDIMENTOS</h2>
+        <p style="font-size: 0.9em; color: #ccc;">Fundador da <strong>GREEX</strong> e <strong>Sabor de Casa</strong>.</p>
+
+        <ul class="social-links">
+            <li><a href="https://www.linkedin.com/in/felipeandrew" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/felipeandrewpro" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.youtube.com/@Ox_felipeandrew" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/ox_felipeandrew" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+
+        <footer style="margin-top: 40px; font-size: 0.8em; color: #555;">
+            &copy; 2026 Felipe Andrew. Construído com IA & Código.
+        </footer>
+
+    </div>
+
+</body>
+</html>
